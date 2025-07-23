@@ -10,7 +10,7 @@
 - Operators in Python
 - Type Conversion
 - Inputs in Python
-- Let's Practice
+
 
 
 ## keywords: 
