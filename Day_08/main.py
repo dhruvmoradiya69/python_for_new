@@ -66,29 +66,93 @@
 # create account class with 2 attributes - balance & account no.
 # create methods for debit, credit & print the balance
 
-class account:
+# class account:
 
-    def __init__(self, balance, account_no):
-        self.balance = balance
-        self.account_no = account_no
+#     def __init__(self, balance, account_no):
+#         self.balance = balance
+#         self.account_no = account_no
 
-    def credit(self, amount):
-        self.balance += amount
-        print("RS.", amount ,"was credit")
-        print("total balance:", self.get_bal())
+#     def credit(self, amount):
+#         self.balance += amount
+#         print("RS.", amount ,"was credit")
+#         print("total balance:", self.get_bal())
 
-    def debit(self, amount):
-        self.balance -= amount
-        print("RS.", amount ,"was debited")
-        print("total balance:", self.get_bal())
+#     def debit(self, amount):
+#         self.balance -= amount
+#         print("RS.", amount ,"was debited")
+#         print("total balance:", self.get_bal())
 
-    def get_bal(self):
-        return self.balance
+#     def get_bal(self):
+#         return self.balance
 
-acc1 = account(10000, "A1")
+# acc1 = account(10000, "A1")
 
-print(acc1.balance, acc1.account_no)
+# print(acc1.balance, acc1.account_no)
 
-acc1.credit(100)
+# acc1.credit(100)
 
-acc1.debit(2222)
+# acc1.debit(2222)
+
+# class student:
+#     def __init__(self, name):
+#         self.name = name
+
+    
+
+# s1 = student("dhruv")
+
+# del s1
+
+# class account:
+#     def __init__(self, acc_no, acc_pass):
+#         self.acc_no = acc_no
+#         # __ using this it get passwd
+#         self.__acc_pass = acc_pass
+
+
+# acc1 = account("1234", "abcde")
+
+
+# print(acc1.acc_no)
+
+
+
+# class person:
+
+#     name = "ano"
+
+#     # method 1
+#     # def changeName(self, name):
+#     #     self.__class__.name = "dhruv"
+#     # method 2
+#     @classmethod
+#     def changeName(cls, name):
+#         cls.name = name
+
+
+# p1 = person()
+
+# p1.changeName("dhruv raju")
+
+# print(person.name)
+
+
+class student:
+    def __init__(self, phy, chem, meth):
+        self.phy = phy
+        self.chem = chem
+        self.meth = meth
+        #self.perce = str((self.phy + self.chem + self.meth) / 3) + "%"
+
+    
+    # def calculator_final(self,):
+    #     self.perce = str((self.phy + self.chem + self.meth) / 3) + "%"
+
+    @property
+    def perce(self):
+        return str((self.phy + self.chem + self.meth) / 3) + "%"
+
+stu1 = student(55,66,77)
+
+print(stu1.perce)
+
